@@ -13,6 +13,10 @@ class Money implements Expression {
         return new Money(amount * multiplier, currency);
     }
 
+    Money reduce(Expression source, String to) {
+        return source.reduce(to);
+    }
+
     public Money reduce(String to){
         return this;
     }
