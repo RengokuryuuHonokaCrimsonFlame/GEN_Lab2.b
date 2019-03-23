@@ -5,10 +5,6 @@ public class Dollar extends Money{
     }
 
     Money times(int multiplier) {
-        return Money.dollar(amount * multiplier);
-    }
-
-    String currency() {
-        return currency;
+        return new Dollar(amount * multiplier, "USD");
     }
 }
