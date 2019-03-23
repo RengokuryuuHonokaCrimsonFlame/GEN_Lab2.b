@@ -1,4 +1,4 @@
-class Money {
+class Money implements Expression {
 
     protected int amount;
 
@@ -22,7 +22,7 @@ class Money {
         return amount == money.amount && currency().equals(money.currency());
     }
 
-    Money plus(Money addend) {
+    Expression plus(Money addend) {
         return new Money(amount + addend.amount, currency);
     }
 
