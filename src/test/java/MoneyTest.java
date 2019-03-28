@@ -107,4 +107,15 @@ public class MoneyTest {
         Money result = bank.reduce(sum, "USD");
         assertEquals(Money.dollar(20), result);
     }
+
+    /*
+    There is no obvious, clean way (not to me, anyway, I’m sure you could think of something)
+    to check the currency of the argument if and only if it is a Money.
+    The experiment fails, we delete the test (which we didn’t like much anyway), and away we go.
+    @Test
+    public void testPlusSameCurrencyReturnsMoney() {
+        Expression sum = Money.dollar(1).plus(Money.dollar(1));
+        assertTrue(sum instanceof Money);
+    }
+    */
 }
